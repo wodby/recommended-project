@@ -1,0 +1,9 @@
+pipeline:
+- name: Install composer dependencies
+  type: command
+  command: composer install --no-interaction --optimize-autoloader
+  directory: $APP_ROOT
+- name: Install drush
+  type: command
+  command: composer require --dev drush/drush
+  directory: $APP_ROOT
